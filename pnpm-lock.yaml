@@ -1,0 +1,23 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      melvor-types:
+        specifier: https://github.com/GamesByMalcsPtyLtd/Melvor-Typing-Project/tarball/6e64205
+        version: melvor-typing-project@https://github.com/GamesByMalcsPtyLtd/Melvor-Typing-Project/tarball/6e64205
+
+packages:
+
+  melvor-typing-project@https://github.com/GamesByMalcsPtyLtd/Melvor-Typing-Project/tarball/6e64205:
+    resolution: {tarball: https://github.com/GamesByMalcsPtyLtd/Melvor-Typing-Project/tarball/6e64205}
+    version: 1.13.0
+
+snapshots:
+
+  melvor-typing-project@https://github.com/GamesByMalcsPtyLtd/Melvor-Typing-Project/tarball/6e64205: {}

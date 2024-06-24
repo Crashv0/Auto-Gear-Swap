@@ -1,0 +1,52 @@
+<template id="ags-dd-toggle">
+  <button
+    type="button"
+    class="btn btn-sm btn-success dropdown-toggle dropdown-toggle-split ags-dd-toggle-btn"
+    @click="uiStore.activeDropdown"
+    data-toggle="dropdown"
+  ></button>
+</template>
+
+<template id="ags-dd-toggle-menu">
+  <div class="dropdown-menu dropdown-menu-right font-size-sm ags-dd-menu">
+    <template
+      v-for="(potionID, equipmentSetIndex, index) in uiStore.potionAssignments"
+      v-show="uiStore.showDropdown"
+    >
+      <div
+        class="dropdown-item d-flex flex-column ags-dd-menu-item"
+        @click.capture="uiStore.setPotionAssignment(equipmentSetIndex, uiStore.activeBtnPotionID)"
+      >
+        <div class="d-flex align-items-center">
+          <span>Equipment Set {{ index + 1 }}</span>
+          <button
+            v-if="potionID"
+            type="button"
+            class="btn btn-primary ml-2 fa-xs p-1"
+            style="line-height: 1 !important"
+            @click.stop="uiStore.clearPotionAssignment(equipmentSetIndex)"
+          >
+            x
+          </button>
+        </div>
+
+        <div class="text-danger" v-if="!potionID">
+          <lang-string lang-id="MENU_TEXT_NONE"></lang-string>
+        </div>
+        <div v-else class="d-flex align-items-center">
+          <span
+            >{{ (uiStore.getPotionFromID(potionID) ?
+            uiStore.getPotionFromID(potionID).name : '') }}</span
+          >
+
+          <img
+            :src="`${(uiStore.getPotionFromID(potionID) ?
+            uiStore.getPotionFromID(potionID).media : '')}`"
+            alt="Potion Image"
+            class="skill-icon-xs ml-2"
+          />
+        </div>
+      </div>
+    </template>
+  </div>
+</template>

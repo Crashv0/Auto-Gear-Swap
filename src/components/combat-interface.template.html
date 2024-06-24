@@ -1,0 +1,23 @@
+<template id="ags-cpm-potion-root">
+  <div id="ags-cpm-potion-container" class="overlay-container d-inline-block">
+    <img
+      id="ags-cpm-potion-image"
+      alt="Combat potion"
+      class="combat-equip-img border-rounded-equip p-1 m-01 pointer-enabled"
+      v-scope
+      @click="handleImageClick"
+      :src="potionImageUrl"
+    />
+    <div
+      v-show="showOption > 0 && potionActive && !tooltipShowing"
+      id="ags-cpm-badge-container"
+    >
+      <span
+        id="ags-cpm-badge-data"
+        :class="`text-size-sm font-w600 badge badge-${badgeInfo.badge} text-${badgeInfo.text}`"
+      >
+        {{ badgeInfo.value }}
+      </span>
+    </div>
+  </div>
+</template>

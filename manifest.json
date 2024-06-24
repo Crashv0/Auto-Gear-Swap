@@ -1,0 +1,11 @@
+{
+  "namespace": "autoGearSwapPlus",
+  "name": "Auto Gear Swap Plus",
+  "setup": "setup.mjs",
+  "load": [
+    "templates.min.html",
+    "setup.css"
+  ],
+  "icon": "https://i.ibb.co/yy5vxKV/agsp-icon.png",
+  "version": "1.0.5"
+}

@@ -1,0 +1,39 @@
+<template id="ags-toggle-root">
+  <div
+    class="col-12 input-group justify-content-center"
+    id="ags-toggle-container"
+  >
+    <div class="custom-control custom-switch custom-control-lg">
+      <input
+        class="custom-control-input"
+        type="checkbox"
+        name="ags-enable-auto-swap"
+        id="ags-enable-auto-swap"
+        @click="toggleSwap"
+        v-model="autoSwapValue"
+      />
+      <label
+        class="font-weight-normal ml-2 custom-control-label"
+        for="ags-enable-auto-swap"
+        style="margin-top: 1rem; margin-bottom: 1rem"
+        >Auto Swap</label
+      >
+    </div>
+    <div class="custom-control custom-switch custom-control-lg">
+      <input
+        class="custom-control-input"
+        type="checkbox"
+        name="ags-enable-auto-potion"
+        id="ags-enable-auto-potion"
+        @click="togglePotion"
+        v-model="autoPotionValue"
+      />
+      <label
+        class="font-weight-normal ml-3 custom-control-label"
+        for="ags-enable-auto-potion"
+        style="margin-top: 1rem; margin-bottom: 1rem"
+        >Auto Potion</label
+      >
+    </div>
+  </div>
+</template>

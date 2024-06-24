@@ -1,0 +1,28 @@
+.border-important {
+  border-color: #e56767 !important;
+}
+.dropdown-menu.show.border-important {
+  border-color: #e56767 !important;
+}
+
+.m-01 {
+  margin: 0.1rem !important;
+}
+
+#ags-cpm-potion-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-top: 0.1rem !important;
+  margin-bottom: 0 !important;
+  margin-left: 0.1 !important;
+  margin-right: 0.1 !important;
+}
+
+#ags-cpm-badge-container {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  pointer-events: none;
+}

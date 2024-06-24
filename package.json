@@ -1,0 +1,26 @@
+{
+  "name": "auto-gear-swap-plus",
+  "version": "1.0.5",
+  "type": "module",
+  "scripts": {
+    "release": "standard-version --path ./",
+    "dryrelease": "standard-version --dry-run --path ./"
+  },
+  "devDependencies": {
+    "melvor-types": "https://github.com/GamesByMalcsPtyLtd/Melvor-Typing-Project/tarball/6e64205"
+  },
+  "license": "MIT",
+  "standard-version": {
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      }
+    ],
+    "tag-prefix": "Auto-Gear-Swap@v"
+  }
+}
