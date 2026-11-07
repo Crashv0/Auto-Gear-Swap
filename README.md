@@ -8,13 +8,21 @@ This mod will change your active gear set based on the [Combat Triangle](https:/
 
 ### Automatically swap gear sets to counter enemy combat style
 
-- Switches to best available set starting from set 1
-- If no counter set available, switches to set that matches enemy combat style
-- Stays in current set if already matching or if none available
+- Picks the set that does best against each enemy using the game's own combat triangle for the area and game mode, so reversed areas (Into the Abyss) and Hardcore triangles are handled
+- Prefers higher damage, then higher damage reduction, then the lowest set number; stays in the current set when no other set is better
+- Skips swaps the game would refuse (dungeons and strongholds without swapping, damage types the area or enemy doesn't allow)
+
+### Set roles
+
+Each equipment set has a role, set under the Auto Swap / Auto Potion switches for the selected set: **Auto** (from its weapon), **Melee**, **Ranged**, **Magic**, or **Never** (never swapped to, e.g. a skilling set).
+
+![toggles and set roles](media/toggles.png)
 
 ### Assign potions to gear sets from potion select menu
 
 ![assign potion menu](media/dropdown-main.png)
+
+Choosing a set that already has that potion, or its **x**, removes it again.
 
 ### Potion button in combat player menu
 
@@ -27,5 +35,3 @@ This mod will change your active gear set based on the [Combat Triangle](https:/
 ### Options
 
 ![settings](media/settings.png)
-
-![toggles](media/toggles.png)

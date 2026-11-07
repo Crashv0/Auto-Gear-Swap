@@ -15,7 +15,7 @@
     >
       <div
         class="dropdown-item d-flex flex-column ags-dd-menu-item"
-        @click.capture="uiStore.setPotionAssignment(equipmentSetIndex, uiStore.activeBtnPotionID)"
+        @click="uiStore.togglePotionAssignment(equipmentSetIndex, uiStore.activeBtnPotionID)"
       >
         <div class="d-flex align-items-center">
           <span>Equipment Set {{ index + 1 }}</span>
@@ -24,6 +24,7 @@
             type="button"
             class="btn btn-primary ml-2 fa-xs p-1"
             style="line-height: 1 !important"
+            :title="`Remove potion from set ${index + 1}`"
             @click.stop="uiStore.clearPotionAssignment(equipmentSetIndex)"
           >
             x

@@ -35,5 +35,21 @@
         >Auto Potion</label
       >
     </div>
+    <label
+      id="ags-set-role"
+      class="w-100 d-flex align-items-center justify-content-center text-nowrap font-size-sm font-weight-normal mb-2"
+      :title="`How Auto Swap treats equipment set ${current + 1}`"
+    >
+      <span class="mr-2">Set {{ current + 1 }} role</span>
+      <select
+        class="form-control form-control-sm w-auto"
+        :value="roles[current]"
+        @change="setRole(current, $event.target.value)"
+      >
+        <option v-for="option in roleOptions" :value="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </label>
   </div>
 </template>
